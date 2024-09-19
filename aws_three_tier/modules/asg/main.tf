@@ -1,7 +1,10 @@
 resource "aws_launch_template" "template" {
-  name                   = var.template_name
-  image_id               = data.aws_ami.ami.id
-  instance_type          = var.instance_type
+  name          = var.template_name
+  image_id      = data.aws_ami.ami.id
+  instance_type = var.instance_type
+  # network_interfaces {
+  #   associate_public_ip_address = true
+  # }
   # key_name               = data.aws_key_pair.key_pair.key_name
   vpc_security_group_ids = [data.aws_security_group.sg.id]
   iam_instance_profile {
