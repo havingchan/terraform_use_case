@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 module "subnet_web1" {
   source      = "../../../modules/subnet"
   vpc_name    = "Having-Web-App-VPC"

@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 module "app_tier_internal_lb" {
   source                                = "../../../modules/lb"
   vpc_name                              = "Having-Web-App-VPC"

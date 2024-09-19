@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 module "igw" {
   source   = "../../../modules/igw"
   vpc_name = "Having-Web-App-VPC"

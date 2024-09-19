@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 module "natgw1" {
   source   = "../../../modules/natgw"
   vpc_name = "Having-Web-App-VPC"

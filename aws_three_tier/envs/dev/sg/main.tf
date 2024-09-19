@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 resource "aws_security_group" "internet_facing_lb_sg" {
   name        = "internet_facing_lb_sg"
   description = "Security group for internet-facing load balancer"

@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 module "app_tier_asg" {
   source                    = "../../../modules/asg"
   vpc_name                  = "Having-Web-App-VPC"
