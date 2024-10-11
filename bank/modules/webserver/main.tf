@@ -18,11 +18,11 @@ resource "aws_instance" "webserver" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = aws_subnet.web_subnet.id
-  count		= var.instance_count
+  count         = var.instance_count
 
   tags = {
-    Name = "${var.webserver_name} webserver"
+    Name       = "${var.webserver_name} webserver"
     Department = var.department_name
-    Project = var.project_name
+    Project    = var.project_name
   }
 }
